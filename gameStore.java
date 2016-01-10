@@ -100,8 +100,8 @@ public class gameStore {
 				System.out.println(f2 + rs.getString(3));
 				f2.close();
 			}
-			
-*/
+			*/
+
 			
 			//retrieve data w/ multiple statements
 			/*
@@ -143,7 +143,7 @@ public class gameStore {
 			
 			
 			//get image from database
-			
+			/*
 			//retrieve only one image
 			ps = c.prepareStatement("SELECT Pic FROM Image WHERE ItemID = 4 LIMIT 1");
 			rs = ps.executeQuery();
@@ -158,7 +158,7 @@ public class gameStore {
 			byte[] temp = blob.getBytes(1,  length);
 			//bytes written to output stream, image created on filesystem
 			fout.write(temp, 0, length);
-			
+			*/
 			
 			
 		} catch (SQLException ex) { //log message if we get error
@@ -169,11 +169,11 @@ public class gameStore {
 				Logger l = Logger.getLogger(gameStore.class.getName());
 				l.log(Level.SEVERE, ex.getMessage(), ex);
 	*/			
-	 //uncomment if writing an image			
+	/* //uncomment if writing an image			
 		} catch (IOException ex) {
 			Logger lgr = Logger.getLogger(gameStore.class.getName());
             lgr.log(Level.SEVERE, ex.getMessage(), ex);   
-           
+           */
 		} finally { //close resources to prevent nullpointer exceptions
 			
 			try {
